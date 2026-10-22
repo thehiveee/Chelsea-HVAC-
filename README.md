@@ -2,6 +2,8 @@
 
 Static site, ready for GitHub + Vercel. No build step: the repo root is the site root.
 
+Every file lives in the repo root — there are no folders — so uploading through GitHub's web uploader (which flattens folders) keeps every path working.
+
 ## Before going live: replace these tokens
 
 | Token | Where | What to put |
@@ -16,7 +18,7 @@ Static site, ready for GitHub + Vercel. No build step: the repo root is the site
 These sections are built but carry the `hidden` attribute in index.html.
 
 - **Reviews (`#reviews`):** paste three genuine Google reviews, word for word and with the customer's permission, in place of the `{{REVIEW_…}}` tokens. Then delete `hidden`. Never write reviews for the client.
-- **Our work (`#work`):** add seven job photos to `/images/work/` as `01.jpg` to `07.jpg` (`01` is landscape and spans two columns). Replace the `{{PHOTO_…_DESCRIPTION}}` alt text, then delete `hidden`.
+- **Our work (`#work`):** add seven job photos to the repo root as `work-01.jpg` to `work-07.jpg` (`work-01` is landscape and spans two columns). Replace the `{{PHOTO_…_DESCRIPTION}}` alt text, then delete `hidden`.
 
 ## Needs a human
 
@@ -71,12 +73,12 @@ Type is **Barlow Condensed** (800, uppercase) for headings and **Barlow** (400�
 
 ## Logo files
 
-The client's logo was lifted off its white background (the sky, clouds and the blue arc were removed), then upscaled 2× with an EDSR super-resolution model. The originals live in `logo-exports/`:
+The client's logo was lifted off its white background (the sky, clouds and the blue arc were removed), then upscaled 2× with an EDSR super-resolution model. Files:
 
 | File | Use |
 |---|---|
 | `chelsea-logo-2x.png` | Master, transparent, 2369 × 1281 |
 | `chelsea-logo-1x.png` | Transparent cut-out at the original resolution |
-| `images/logo-600.png`, `images/logo-1200.png` | Web sizes used on the site |
+| `logo-600.png`, `logo-1200.png` | Web sizes used on the site |
 
 The logo has navy lettering, so it is only placed on white or light backgrounds.

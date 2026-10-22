@@ -17,7 +17,7 @@
       ]
     },
     {
-      "source": "/(images/.*|favicon.*|apple-touch-icon.png|icon-512.png)",
+      "source": "/(logo-.*|og-image.jpg|work-.*|chelsea-logo-.*|favicon.*|apple-touch-icon.png|icon-512.png)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]

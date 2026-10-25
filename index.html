@@ -7,7 +7,9 @@
 <meta name="description" content="Heating and cooling for New York homes and buildings — AC repair, heating, PTAC and through-the-wall units, ductless mini-splits, winterization and storage. Call (631) 600-0531.">
 <link rel="canonical" href="https://www.chelseahvacservices.com/">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#012653">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#071631" media="(prefers-color-scheme: dark)">
 <!-- Social preview -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Chelsea HVAC Services">
@@ -79,6 +81,7 @@ gtag('js',new Date());gtag('config','{{GA4_MEASUREMENT_ID}}');
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:110px}
 body{margin:0;background:#fff;color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;padding-bottom:var(--callbar-h);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
+picture{display:contents}
 a{color:inherit}
 h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;margin:0;line-height:.94;letter-spacing:0}
 p{margin:0}
@@ -367,8 +370,8 @@ form .btn-navy{width:100%;min-height:58px}
 .closing .acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
 .foot{background:var(--navy-3);color:var(--muted-dk);padding:64px 0 40px}
 .foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
-.foot-logo{display:inline-block;background:#fff;padding:14px 18px;border-radius:6px}
-.foot-logo img{width:190px;height:auto}
+.foot-logo{display:inline-block}
+.foot-logo img{width:200px;height:auto}
 .foot p{margin-top:18px;font-size:15px}
 .foot h4{margin:0;color:#fff;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .foot ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px;font-size:15px}
@@ -420,6 +423,50 @@ form .btn-navy{width:100%;min-height:58px}
 /* ---------- Reveal on scroll ---------- */
 .rv{transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
 .js .rv:not(.in){opacity:0;transform:translateY(22px)}
+
+
+/* ---------- Dark mode: our own theme, so phones don't force-darken the page ---------- */
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --bg:#071631; --surface:#0C2246; --raised:#11305E;
+    --text:#EAF0F8; --muted:#A9BCD6; --line:rgba(255,255,255,.12); --mist:#0C2246;
+    --orange-t:#F89640; --blue-t:#7DB6EC;
+    --orange-tint:rgba(245,115,0,.18); --blue-tint:rgba(79,160,236,.18);
+  }
+  body{background:var(--bg)}
+  .head{background:var(--bg);border-bottom-color:var(--line)}
+  .head.is-stuck{box-shadow:0 10px 30px -14px rgba(0,0,0,.7)}
+  .drawer{background:var(--bg)}
+  .icon-btn{border-color:rgba(255,255,255,.32);color:var(--text)}
+  .btn-line{border-color:rgba(255,255,255,.4);color:var(--text)}
+  .btn-line:hover{background:#fff;color:var(--navy)}
+  .btn-navy{background:#EAF0F8;color:var(--navy)}
+  .btn-navy:hover{background:#fff}
+  .hero{background:var(--navy)}
+  .book-body{background:var(--surface)}
+  .issue span{background:var(--surface)}
+  .issue label:hover span{background:var(--raised)}
+  .issue .k-other input:checked + span{background:rgba(255,255,255,.1);color:#fff}
+  .field input{background:var(--bg);border-color:var(--line);color:var(--text)}
+  .field input::placeholder{color:#8FA3C0}
+  .field input:focus{background:var(--bg);border-color:#4FA0EC;box-shadow:0 0 0 3px rgba(79,160,236,.25)}
+  .field .err{color:#FF8A80}
+  .field.bad input{border-color:#FF8A80;background:rgba(179,38,30,.14)}
+  .form-fail{background:rgba(179,38,30,.18);color:#FFB4AB}
+  .fine svg{stroke:#7DB6EC}
+  .ticker{background:var(--surface)}
+  .band-dark,.bs-grid > div{background:var(--navy)}
+  .season ul{color:#CAD6E6}
+  .why-card{background:var(--surface);box-shadow:none}
+  .review{background:var(--surface)}
+  .panel-dark{background:var(--navy)}
+  .closing{background:var(--surface)}
+  .pop-bg{background:rgba(0,8,20,.72)}
+  .pop-card{background:var(--surface);box-shadow:0 40px 90px -30px rgba(0,0,0,.9)}
+  .pop-x{background:rgba(255,255,255,.08);color:var(--text)}
+  .cookie{background:var(--surface);box-shadow:0 20px 50px -20px rgba(0,0,0,.8)}
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1100px){
@@ -549,7 +596,7 @@ form .btn-navy{width:100%;min-height:58px}
       <a href="#seasonal">Seasonal care</a>
     </nav>
     <a href="/" class="head-logo" aria-label="Chelsea HVAC Services — home">
-      <img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="(max-width:720px) 108px, 178px" width="600" height="324" alt="Chelsea HVAC Services">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="/logo-dark-600.png 600w, /logo-dark-1200.png 1200w" sizes="(max-width:720px) 108px, 178px"><img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="(max-width:720px) 108px, 178px" width="600" height="324" alt="Chelsea HVAC Services"></picture>
     </a>
     <div class="head-right">
       <nav class="nav" aria-label="More">
@@ -802,7 +849,7 @@ form .btn-navy{width:100%;min-height:58px}
 <section class="band band-mist">
   <div class="wrap why">
     <div class="why-card rv">
-      <img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="300px" width="600" height="324" alt="" loading="lazy">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="/logo-dark-600.png 600w, /logo-dark-1200.png 1200w" sizes="300px"><img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="300px" width="600" height="324" alt="" loading="lazy"></picture>
       <div class="split-bar" aria-hidden="true"><span></span><span></span></div>
       <p>Locally owned. Answering to you, not a franchise.</p>
     </div>
@@ -960,7 +1007,7 @@ form .btn-navy{width:100%;min-height:58px}
 <!-- ============ CLOSING ============ -->
 <section class="closing">
   <div class="wrap">
-    <img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="(max-width:720px) 250px, 360px" width="600" height="324" alt="Chelsea HVAC Services" loading="lazy">
+    <picture><source media="(prefers-color-scheme: dark)" srcset="/logo-dark-600.png 600w, /logo-dark-1200.png 1200w" sizes="(max-width:720px) 250px, 360px"><img src="/logo-600.png" srcset="/logo-600.png 600w, /logo-1200.png 1200w" sizes="(max-width:720px) 250px, 360px" width="600" height="324" alt="Chelsea HVAC Services" loading="lazy"></picture>
     <h2>Whatever the weather does next.</h2>
     <p>Heat wave or cold snap, one call to Chelsea HVAC gets your home or building back to exactly where you like it.</p>
     <div class="acts">
@@ -980,7 +1027,7 @@ form .btn-navy{width:100%;min-height:58px}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <span class="foot-logo"><img src="/logo-600.png" width="600" height="324" alt="Chelsea HVAC Services" loading="lazy"></span>
+        <span class="foot-logo"><img src="/logo-dark-600.png" srcset="/logo-dark-600.png 600w, /logo-dark-1200.png 1200w" sizes="200px" width="600" height="324" alt="Chelsea HVAC Services" loading="lazy"></span>
         <p>Locally owned heating, cooling and refrigeration for New York homes, buildings and businesses.</p>
       </div>
       <div>
@@ -1031,7 +1078,7 @@ form .btn-navy{width:100%;min-height:58px}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
     </button>
     <div class="pop-top">
-      <img src="/logo-600.png" width="600" height="324" alt="Chelsea HVAC Services">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="/logo-dark-600.png 600w, /logo-dark-1200.png 1200w" sizes="180px"><img src="/logo-600.png" width="600" height="324" alt="Chelsea HVAC Services"></picture>
       <p class="eyebrow" id="popEyebrow">Before you go</p>
       <h2 id="popTitle">Don't spend another night too hot or too cold.</h2>
       <p id="popBody">Leave your number and we'll call you back to get it sorted. No obligation, no hard sell.</p>

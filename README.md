@@ -54,6 +54,14 @@ These sections are built but carry the `hidden` attribute in index.html.
 | FAQ | Height-animated accordion | |
 | Sections | Fade up once as they scroll into view; coloured rules draw in | |
 
+## Dark mode
+
+The site has its own dark theme (`prefers-color-scheme: dark`) and declares `<meta name="color-scheme" content="light dark">`. That declaration stops phone browsers (Chrome, Samsung Internet and others) from auto-darkening the page, which is what produced the grey header, stray white outlines and the grey box behind the logo. In dark mode:
+
+- The page sits on deep navy (`#071631`) with raised panels (`#0C2246`), hairlines at 12% white, and lighter orange/blue text variants so everything passes contrast.
+- The logo switches to a light-lettering version (`logo-dark-*.png`): white CHELSEA, light-blue roof, window and HVAC, orange kept. The footer is navy in both modes, so it always uses this version.
+- Orange call buttons are unchanged; the form's submit button becomes off-white so it stands out from the dark panel.
+
 Everything respects `prefers-reduced-motion: reduce`, which turns the motion off and shows final states.
 
 Forms post to Web3Forms with a honeypot field and a 3-second fill-time check against spam. Phone numbers are validated as 10-digit US numbers and auto-formatted.
@@ -82,3 +90,8 @@ The client's logo was lifted off its white background (the sky, clouds and the b
 | `logo-600.png`, `logo-1200.png` | Web sizes used on the site |
 
 The logo has navy lettering, so it is only placed on white or light backgrounds.
+
+| File | Use |
+|---|---|
+| `chelsea-logo-dark-2x.png` | Light-lettering master for dark backgrounds, transparent |
+| `logo-dark-600.png`, `logo-dark-1200.png` | Web sizes of the dark-background logo (dark mode, footer) |

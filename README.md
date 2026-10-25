@@ -59,7 +59,7 @@ These sections are built but carry the `hidden` attribute in index.html.
 The site has its own dark theme (`prefers-color-scheme: dark`) and declares `<meta name="color-scheme" content="light dark">`. That declaration stops phone browsers (Chrome, Samsung Internet and others) from auto-darkening the page, which is what produced the grey header, stray white outlines and the grey box behind the logo. In dark mode:
 
 - The page sits on deep navy (`#071631`) with raised panels (`#0C2246`), hairlines at 12% white, and lighter orange/blue text variants so everything passes contrast.
-- The logo switches to a light-lettering version (`logo-dark-*.png`): white CHELSEA, light-blue roof, window and HVAC, orange kept. The footer is navy in both modes, so it always uses this version.
+- The logo switches to the light-lettering version (`logo-dark.svg`): white CHELSEA, light-blue roof, window and HVAC, orange kept. The footer is navy in both modes, so it always uses this version.
 - Orange call buttons are unchanged; the form's submit button becomes off-white so it stands out from the dark panel.
 
 Everything respects `prefers-reduced-motion: reduce`, which turns the motion off and shows final states.
@@ -81,17 +81,19 @@ Type is **Barlow Condensed** (800, uppercase) for headings and **Barlow** (400�
 
 ## Logo files
 
-The client's logo was lifted off its white background (the sky, clouds and the blue arc were removed), then upscaled 2× with an EDSR super-resolution model. Files:
+The logo was redrawn as a **vector (SVG)** from the client's artwork, in flat brand colours, so it is sharp at any size and on any screen. Each part is a single solid colour: no gradients, speckles or halos.
+
+| Part | Light version (`logo.svg`) | Dark version (`logo-dark.svg`) |
+|---|---|---|
+| CHELSEA | Navy `#012653` | White `#FFFFFF` |
+| House and window | Blue `#0B5FAE` | Light blue `#4FA0EC` |
+| Air swoosh | `#4AA7DA` | `#8CCBF0` |
+| HVAC | Blue `#046DD0` | Light blue `#4FA0EC` |
+| SERVICES | Orange `#F57300` | Orange `#F57300` |
+| HVAC CONTRACTOR + rules | Grey `#3F3F3F` | Blue-grey `#CAD6E6` |
 
 | File | Use |
 |---|---|
-| `chelsea-logo-2x.png` | Master, transparent, 2369 × 1281 |
-| `chelsea-logo-1x.png` | Transparent cut-out at the original resolution |
-| `logo-600.png`, `logo-1200.png` | Web sizes used on the site |
-
-The logo has navy lettering, so it is only placed on white or light backgrounds.
-
-| File | Use |
-|---|---|
-| `chelsea-logo-dark-2x.png` | Light-lettering master for dark backgrounds, transparent |
-| `logo-dark-600.png`, `logo-dark-1200.png` | Web sizes of the dark-background logo (dark mode, footer) |
+| `logo.svg` / `logo-dark.svg` | Used on the site (light backgrounds / dark mode and the footer) |
+| `chelsea-logo-4000.png` / `chelsea-logo-dark-4000.png` | High-resolution transparent PNGs for print, social and vans |
+| `logo-600.png`, `logo-1200.png`, `logo-dark-600.png`, `logo-dark-1200.png` | Smaller transparent PNGs (Google listing, email signatures) |
